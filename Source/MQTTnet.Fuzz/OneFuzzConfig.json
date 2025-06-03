@@ -1,0 +1,34 @@
+{
+  "configVersion": 3,
+  "entries": [
+    {
+      "fuzzer": {
+        "$type": "libfuzzerDotNet",
+        "dll": "MQTTnet.Fuzz.dll",
+        "class": "MQTTnet.Fuzz.MQTTnet_Fuzz",
+        "method": "Decode_Encode"
+      },
+      "adoTemplate": {
+        "org": "msazure",
+        "project": "One",
+        "AssignedTo": "avishekpant@microsoft.com",
+        "AreaPath": "One\\Azure Edge and Platform\\One Edge\\Digital Operations\\Akri\\Devx",
+        "IterationPath": "One",
+        "AdoFields": {
+            "System.State": "committed",
+            "Microsoft.VSTS.Common.Priority": "1"
+        }
+      },
+      "jobNotificationEmail": "e4ksdkdevs@microsoft.com",
+      "skip": false,
+      "rebootAfterSetup": false,
+      "oneFuzzJobs": [
+        {
+          "projectName": "OneFuzz-MQTTnet",
+          "targetName": "MQTTnet-Fuzz"
+        }
+      ],
+      "jobDependencies": [ "MQTTnet.Fuzz.dll", "MQTTnet.Fuzz.pdb", "MQTTnet.dll", "MQTTnet.pdb", "dummy.txt" ]
+    }
+  ]
+}
