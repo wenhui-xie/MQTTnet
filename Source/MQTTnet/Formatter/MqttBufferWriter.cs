@@ -207,6 +207,8 @@ namespace MQTTnet.Formatter
 
         public void WriteVariableByteInteger(uint value)
         {
+            EnsureAdditionalCapacity(GetVariableByteIntegerSize(value));
+
             if (value == 0)
             {
                 _buffer[_position] = 0;
